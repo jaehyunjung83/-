@@ -8,7 +8,7 @@ conda create --name(or -n) "환경명' python=3.8.5
 ```
 ## env지우기
 ```
-conda remove --name(or -n) "환경명'
+conda env remove --name(or -n) "환경명'
 ```
 ## 존재하는 가상환경 list확인
 ```
