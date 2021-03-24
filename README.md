@@ -4,9 +4,12 @@
 # Anaconda
 ## 새 가상환경 만들기
 ```
-conda create --name "wordcloud' python=3.8.5
+conda create --name(or -n) "환경명' python=3.8.5
 ```
-
+## env지우기
+```
+conda remove --name(or -n) "환경명'
+```
 ## 존재하는 가상환경 list확인
 ```
 conda evn list
