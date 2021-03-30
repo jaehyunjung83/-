@@ -1,39 +1,42 @@
-# Anaconda commandline
-파이썬/conda/Terminal등명령어
+# 이전에 RS나 RN 작업하다 지우고 다시 시작하면 100% 안됨!
 
-# Anaconda
-## 새 가상환경 만들기
+## 이전 npm의 서버 작업 내용 및 포트가 살아있어서 죽인 다음에 다시 시작해야 함!!
+
+현재 살아있는 node server 의 PID 찾기
 ```
-conda create --name(or -n) "환경명' python=3.8.5
-```
-## env지우기
-```
-conda env remove --name(or -n) "환경명'
-```
-## 존재하는 가상환경 list확인
-```
-conda evn list
-```
-## 그 가상환경에 설치된 파이썬 패키지 list확인
-```
-conda list
-```
-## 가상환경 실행
-```
-conda activate _tika_
-```
-## 가상환경안에 패키지 설치
-```
-conda install _tika_ 
-```
-## pip만 지원하는 패키지 설치
-```
-conda install pip
+(sudo) lsof -i :8081
 ```
 ```
-pip install _tika_
+COMMAND   PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+node    25762  jjh   24u  IPv6 0xb6ac2225f144d89f      0t0  TCP *:sunproxyadmin
 ```
-## git에서 clone한 project의 requirements.txt설치
+PID를 찾아서 죽이기
 ```
-while read requirement; do conda install --yes $requirement; done < requirements.txt
+kill -9 25762   (-9는 옵션)
+```
+NPM에 남아있는 캐쉬 지우고 다시 시작
+```
+npm start --reset-cache
+```
+
+# RN 프로젝트 시작 기본 command
+
+일단 노드 설치
+```
+npm install
+```
+
+RN 라이브러리들과 ios, android 연결
+```
+react native link
+```
+
+ios에 pod설치(ios의 package.json같은건가?)하고 다시 원 루트로 돌아오기
+```
+cd ios && pod install && cd ..
+```
+
+ios app build
+```
+react-native run-ios
 ```
