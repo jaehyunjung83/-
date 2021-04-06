@@ -22,7 +22,7 @@ npm start --reset-cache
 
 Failed to build iOS project. We ran "xcodebuild" command but it exited with error code **65**
 ```
-xcode에서 "프로젝트명. __xcworkspace__ 열고 build해보기, 이후 xcode에서 출력되는 오류 찾아서 수정
+xcode에서 "프로젝트명.__xcworkspace__ 열고 build해보기, 이후 xcode에서 출력되는 오류 찾아서 수정
 ```
 cocoapod 설치 되어있는데 cd ios에서 pod install 하면
 ERROR:  While executing gem ... (Gem::FilePermissionError)
