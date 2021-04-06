@@ -18,6 +18,39 @@ NPM에 남아있는 캐쉬 지우고 다시 시작
 ```
 npm start --reset-cache
 ```
+# 오류별 대처 command
+
+Failed to build iOS project. We ran "xcodebuild" command but it exited with error code **65**
+```
+xcode에서 프로젝트명.**xcworkspace** 열고 build해보기, 이후 xcode에서 출력되는 오류 찾아서 수정
+```
+cocoapod 설치 되어있는데 cd ios에서 pod install 하면
+ERROR:  While executing gem ... (Gem::FilePermissionError)
+    You don't have write permissions for the /Library/Ruby/Gems/x.x.x directory.
+메시지 나올 때
+```
+sudo 등 권한의 문제가 아님!!!
+rbenv **global** x.x.x  : ruby를 전역 버전으로 바꿔주기
+```
+```
+vim ~/.zshrc or vim ~/.bash_profile
+```
+```
+[[ -d ~/.rbenv  ]] && \
+  export PATH=${HOME}/.rbenv/bin:${PATH} && \
+  eval "$(rbenv init -)"
+맨 밑에 추가 && :wq!
+```
+```
+source ~/.zshrc or source ~/.bash_profile
+```
+```
+gem install bundler
+```
+```
+react-native link && cd ios && pod install && cd ..
+```
+
 
 # RN 프로젝트 시작 기본 command
 
