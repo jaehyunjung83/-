@@ -14,6 +14,11 @@ PID를 찾아서 죽이기
 ```
 kill -9 25762   (-9는 옵션)
 ```
+그냥 켜져있는 모든 node server 다 죽이기
+```
+killall node
+```
+
 NPM에 남아있는 캐쉬 지우고 다시 시작
 ```
 npm start --reset-cache
