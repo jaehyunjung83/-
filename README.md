@@ -16,9 +16,12 @@ kill -9 25762   (-9는 옵션)
 ```
 그냥 켜져있는 모든 node server 다 죽이기
 ```
-killall node
+killall -9 node
 ```
-
+시뮬레이터에서 앱 삭제 및 재 구축 / 실행
+```
+react-native start --reset-cache
+```
 NPM에 남아있는 캐쉬 지우고 다시 시작
 ```
 npm start --reset-cache
