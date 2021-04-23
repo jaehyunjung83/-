@@ -22,6 +22,25 @@ conda list
 ```
 conda activate _tika_
 ```
+## conda로 requirement 설치
+```
+conda install --yes --file requirements.txt
+```
+## conda로 requirement 설치 안 되면 아래와 같은 메시지 출력
+```
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - whitenoise==3.3.1
+  - django-allauth==0.37.1
+  - djangorestframework==3.9.1
+  - django==2.2.13
+  - django-cors-headers==2.4.0
+  - django-rest-auth==0.9.3
+```
+## 그럼 아래처럼 개별 설치
+```
+conda install -c conda-forge whitenoise==3.3.1
+```
 ## 가상환경안에 패키지 설치
 ```
 conda install _tika_ 
