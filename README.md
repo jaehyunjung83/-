@@ -26,6 +26,10 @@ NPM에 남아있는 캐쉬 지우고 다시 시작
 ```
 npm start --reset-cache
 ```
+Reactnative cache 전부 삭제 && 전부 다시 재설치 && 다
+```
+RN >= 0.63 - watchman watch-del-all && rm -rf node_modules && npm install && rm -rf /tmp/metro-* && npm run start --reset-cache
+```
 # 오류별 대처 command
 
 Failed to build iOS project. We ran "xcodebuild" command but it exited with error code **65**
