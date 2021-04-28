@@ -30,12 +30,15 @@ Reactnative cache 전부 삭제 && 전부 다시 재설치 && 다
 ```
 RN >= 0.63 - watchman watch-del-all && rm -rf node_modules && npm install && rm -rf /tmp/metro-* && npm run start --reset-cache
 ```
+---
+
 # 오류별 대처 command
 
 Failed to build iOS project. We ran "xcodebuild" command but it exited with error code **65**
 ```
 xcode에서 "프로젝트명.xcworkspace 열고 build해보기, 이후 xcode에서 출력되는 오류 찾아서 수정
 ```
+---
 cocoapod 설치 되어있는데 cd ios에서 pod install 하면
 ERROR:  While executing gem ... (Gem::FilePermissionError)
     You don't have write permissions for the /Library/Ruby/Gems/x.x.x directory.
@@ -62,7 +65,7 @@ gem install bundler
 ```
 react-native link && cd ios && pod install && cd ..
 ```
-
+---
 
 # RN 프로젝트 시작 기본 command
 
@@ -85,3 +88,4 @@ ios app build
 ```
 react-native run-ios
 ```
+---
