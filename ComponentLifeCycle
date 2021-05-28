@@ -1,0 +1,13 @@
+// React일반
+
+// !! Class 컴포넌트
+// constructor -> render -> ref -> componentDidMount -> setState/props 바뀔때 -> shouldComponentUpdate -> render -> componentDidUpdate
+// 
+// (! 부모가 나를 없앴을 때 -> componentWillUnmount -> 소멸)
+
+// componentDidMount() {} : 컴포넌트가 첫 렌더링된 후
+// shouldComponentUpdate() {} : 컴포넌트가 렌더링 되기 전 => 렌더링 하지 말아야 할 것 custumizing하는 데 주로 사용(성능 및 최적화 작업)
+// * Hooks의 경우 memo로 감싸서 대체사용. pureComponent는 array 나 component의 props가 많으면 잘 구분하지 못하는데 조건별로 리 리 렌더링
+//  할지 말지를 customize해서 사용
+// componentDidUpdate() {} : 리렌더링 후
+// componentWillUnmount() {} : 컴포넌트 제거 직전
