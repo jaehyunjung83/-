@@ -1,3 +1,10 @@
+# M1 에서 brew install은 그냥 하면 안되고
+
+```bash
+arch -x86_64 brew install [packageName]
+```
+
+
 # Anaconda commandline
 파이썬/conda/Terminal등명령어
 
